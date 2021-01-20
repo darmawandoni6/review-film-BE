@@ -1,0 +1,44 @@
+
+npx sequelize-cli model:generate --name auth --attributes user_id:string,password:string,name:string
+
+auth
+user_id,
+password,
+name
+
+npx sequelize-cli model:generate --name film --attributes name:string,id_picture:integer,type:string,status:string,id_list_genre:integer,skor:float,tgl_rilis:date,sinopsis:text,review_penulis:text
+
+tabel film
+id
+name
+id_picture
+type
+status
+id_list_genre
+skor
+tgl_rilis
+sinopsis,
+review_penulis
+
+
+npx sequelize-cli model:generate --name file --attributes name:string,path:string,
+file
+id,
+name,
+path
+
+npx sequelize-cli model:generate --name list_genre --attributes id_film:integer,id_genre:integer
+list_genre
+id
+id_film
+id_genre
+
+npx sequelize-cli model:generate --name genre --attributes name:string
+genre
+id
+name
+
+
+npx sequelize db:migrate:undo:all
+
+
